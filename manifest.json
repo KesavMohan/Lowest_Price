@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Travel Price Sorter",
+    "version": "1.0",
+    "description": "Automatically sorts search results by lowest price on popular travel booking sites",
+    "permissions": [
+      "activeTab"
+    ],
+    "host_permissions": [
+      "*://*.hotels.com/*",
+      "*://*.expedia.com/*",
+      "*://*.kayak.com/*",
+      "*://*.priceline.com/*",
+      "*://*.booking.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.hotels.com/*",
+          "*://*.expedia.com/*",
+          "*://*.kayak.com/*",
+          "*://*.priceline.com/*",
+          "*://*.booking.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ]
+  }
